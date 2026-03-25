@@ -38,3 +38,25 @@ export function merge(
 // get value if not it'll return Infinity 
 const getValue = (arr: number[], index: number) => 
   (index >= 0 && index < arr.length) ? arr[index] : Infinity;
+
+//random for test
+
+const getRandomInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
+const RandARR = (size: number) => Array.from({ length: size }, () => getRandomInt(0, 100));
+
+//Ascending
+const rand_c1 = RandARR(5).sort((a, b) => a - b);
+const rand_c2 = RandARR(5).sort((a, b) => a - b);
+
+//Descending
+const rand_c3 = RandARR(5).sort((a, b) => b - a);
+
+//call merge
+const result = merge(rand_c1, rand_c2, rand_c3);
+
+//display
+console.log("Collection 1 (Asc): ", rand_c1);
+console.log("Collection 2 (Asc): ", rand_c2);
+console.log("Collection 3 (Desc):", rand_c3);
+console.log("----------------------");
+console.log("Result (Sorted Asc):", result);
