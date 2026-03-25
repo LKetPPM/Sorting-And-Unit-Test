@@ -45,14 +45,10 @@ test/
 jest.config.js
 pagkage-lock.jason
 package.json
-test-report.html
 ```
-
------ You can also watch report on website as well -------
 
 
 ## Tech
 - TypeScript
-- HTML
 - Jest
 - tsx
